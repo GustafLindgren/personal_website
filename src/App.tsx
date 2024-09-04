@@ -1,13 +1,34 @@
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import './App.css'
+import Footer from './components/Footer.tsx'
+import Navbar from './components/Navbar.tsx'
+
+import Home from './pages/Home.tsx'
+import Education from './pages/Education.tsx'
+import Experience from './pages/Experience.tsx';
+import Skills from './pages/Skills.tsx';
+import NoPage from './pages/NoPage.tsx'
 
 function App() {
 
   return (
     <>
       <div className='crt-animation'>
-      <h1>Test test</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit molestias vitae suscipit facere esse voluptas 
-        deserunt consequuntur dicta, libero sed asperiores, amet nobis voluptatem! Dolor nemo suscipit a voluptatem consectetur.</p>
+
+        <BrowserRouter>
+            <Routes>
+              <Route path='/' element={<Navbar />} >
+                <Route index element={<Home />} />
+                <Route path='experience' element={<Experience />} />
+                <Route path='education' element={<Education />} />
+                <Route path='skills' element={<Skills />} />
+                <Route path='*' element={<NoPage />} />
+              </Route>
+            </Routes>
+        </BrowserRouter>
+        <Footer/>
       </div>
       
     </>
