@@ -1,19 +1,26 @@
 # set the base image to create the image for react app
 FROM node:22-alpine
 
+# set UID and GID to the same as the host system user
+ARG UID=1000
+ARG GID=1000
+
 # create a user with permissions to run the app
 # -S -> create a system user
 # -G -> add the user to a group
 # This is done to avoid running the app as root
 # If the app is run as root, any vulnerability in the app can be exploited to gain access to the host system
 # It's a good practice to run the app as a non-root user
-#RUN addgroup app && adduser -S -G app app
-
+# RUN addgroup --gid $GID $GROUPNAME
+# RUN adduser --uid $UID -S -G $GROUPNAME $UNAME
+# RUN addgroup -g $GID -o $UNAME
+# RUN adduser -u $UID -g $GID $UNAME
+# RUN groupmod -g "${GID}" node && usermod -u "${UID}" -g "${GID}" node
 # set the user to run the app
-#USER app
+USER node
 
 # set the working directory to /app
-WORKDIR /app
+WORKDIR /home/node/app
 
 # copy package.json and package-lock.json to the working directory
 # This is done before copying the rest of the files to take advantage of Docker’s cache
@@ -27,15 +34,15 @@ COPY package*.json ./
 
 # Ownership Issues: When copying files into a container, the ownership of the files is often inherited from the host system. 
 # This can lead to permission issues within the container if the application user doesn't have the necessary permissions to access or modify the files.
-#USER root
+USER root
 
 # change the ownership of the /app directory to the app user
 # chown -R <user>:<group> <directory>
 # chown command changes the user and/or group ownership of for given file.
-#RUN chown -R app:app .
+RUN chown -R node:node .
 
 # change the user back to the app user
-#USER app
+USER node
 
 # install dependencies
 RUN npm install
