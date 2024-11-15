@@ -11,7 +11,7 @@ import Experience from './pages/Experience.tsx';
 import Skills from './pages/Skills.tsx';
 import NoPage from './pages/NoPage.tsx'
 
-function App() {
+const App = () => {
 
   return (
     <>

@@ -12,6 +12,7 @@
   font-family: "VT323", monospace;
   font-weight: 400;
   font-style: normal;
+  text-shadow: 0 0 0.5rem;
   
   scrollbar-color: var(--primary-color) var(--secondary-color);
   /* clamp(min size, pref size, max size) */
@@ -28,13 +29,10 @@
 }
 #root {
   height: 95vh;
-  width: 95vw;
-  max-width: 3000px;
-  max-height: 3000px;
-  
+  /*width: 95vw;
   border: 2px solid var(--primary-color);
   box-shadow: 0px 0px 2rem;
-  padding: 0;
+  padding: 0;*/
 
 }
 
