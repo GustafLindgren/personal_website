@@ -3,6 +3,9 @@
   --secondary-color: #ff5c00;
   --tertiary-color: #c72d04;
   --background-color: #111;
+  --hover-color: rgb(255, 213, 44, 0.1);
+  --subnav-color: rgb(255, 213, 44, 0.5);
+  --subnavHover-color: rgb(255, 213, 44, 0.6);
   /*
   --primary-color: #23fc27;
   --secondary-color: #11a312;

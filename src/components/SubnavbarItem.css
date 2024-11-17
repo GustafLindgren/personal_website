@@ -1,0 +1,26 @@
+.subnavItem {
+    text-decoration: none;
+    color: var(--subnav-color);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.subnavItem:hover {
+    background-color: var(--hover-color);
+}
+
+.activeSubNav {
+    color: var(--primary-color);
+}
+
+@media (width <= 500px) {
+    a {
+        font-size: clamp(17px, 1.7vw, 23px);
+    }
+}
+
+@media (width > 500px) {
+    a {
+        font-size: clamp(30px, 1.7vw, 40px);
+    }
+}

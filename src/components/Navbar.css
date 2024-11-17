@@ -72,7 +72,7 @@ nav {
     border-left: 2px var(--primary-color) solid;
     border-top: 2px var(--primary-color) solid;
     border-right: 2px var(--primary-color) solid;
-    background-color: rgb(255, 213, 44, 0.1)
+    background-color: var(--hover-color);
 }
 
 

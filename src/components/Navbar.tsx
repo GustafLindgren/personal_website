@@ -8,7 +8,7 @@ const Navbar = () => {
 
     //destructuring pathname from location
     const { pathname } = location;
-
+    
     //Javascript split method to get the name of the path in array
     const splitLocation = pathname.split("/");
 
@@ -22,8 +22,8 @@ const Navbar = () => {
                     <div className={splitLocation[1] === "" ? "active" : ""}>
                         <Link className="link" to="/">Home</Link>
                     </div>
-                    <div className={splitLocation[1] === "experience" ? "active" : ""}>
-                        <Link className="link" to="/experience">Experience</Link>
+                    <div className={splitLocation[1] === 'experience' ? "active" : ""}>
+                        <Link className="link" to="/experience/willys">Experience</Link>
                     </div>
                     <div className={splitLocation[1] === "education" ? "active" : ""}>
                         <Link className="link" to="/education">Education</Link>

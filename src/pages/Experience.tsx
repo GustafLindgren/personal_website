@@ -1,9 +1,21 @@
+import Subnavbar from "../components/Subnavbar";
 
-function Experience() {
+const experiences = [['/experience/willys', 'Willys'], 
+    ['/experience/webgroup', 'Webgroup']];
+
+const Experience = () => {
     
     return (
-        <h1>Experience</h1>
+        
+        <>
+            <Subnavbar subnavbarItems={experiences} />
+            <h1>Experience</h1>
+        </>
+        
     )
 }
 
-export default Experience
+export {
+    experiences,
+    Experience
+}
