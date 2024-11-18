@@ -1,0 +1,77 @@
+#subnavbar {
+    position: absolute;
+    width: 50%;
+    display: flex;
+}
+
+/*@media (width >= 2400px) {
+    #subnavbar {
+        left: 1015px;
+    }
+}
+
+@media (2300px <= width < 2400px) {
+    #subnavbar {
+        left: 976px;
+    }
+}
+
+@media (2200px <= width < 2300px) {
+    #subnavbar {
+        left: 935px;
+    }
+}
+
+@media (2100px <= width < 2200px) {
+    #subnavbar {
+        left: 894px;
+    }
+}
+
+@media (2000px <= width < 2100px) {
+    #subnavbar {
+        left: 853px;
+    }
+}
+
+@media (1900px <= width < 2000px) {
+    #subnavbar {
+        left: 4.5%;
+    }
+}
+
+@media (1800px <= width < 1900px) {
+    #subnavbar {
+        left: 4%;
+    }
+}
+
+@media (1500px <= width < 1600px) {
+    #subnavbar {
+        left: 3.25%;
+    }
+}
+
+@media (1400px <= width < 1500px) {
+    #subnavbar {
+        left: 2.5%;
+    }
+}
+
+@media (1300px <= width < 1400px) {
+    #subnavbar {
+        left: 2%;
+    }
+}
+
+@media (1200px <= width < 1300px) {
+    #subnavbar {
+        left: 1%;
+    }
+}
+
+@media (1100px <= width < 1200px) {
+    #subnavbar {
+        left: -14%;
+    }
+}*/
