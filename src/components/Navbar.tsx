@@ -25,8 +25,8 @@ const Navbar = () => {
                     <div id="experience" className={splitLocation[1] === 'experience' ? "active" : ""}>
                         <Link className="link" to="/experience/willys">Experience</Link>
                     </div>
-                    <div className={splitLocation[1] === "education" ? "active" : ""}>
-                        <Link className="link" to="/education">Education</Link>
+                    <div id="education" className={splitLocation[1] === "education" ? "active" : ""}>
+                        <Link className="link" to="/education/liu">Education</Link>
                     </div>
                     <div className={splitLocation[1] === "skills" ? "active" : ""}>
                         <Link className="link" to="/skills">Skills</Link>
